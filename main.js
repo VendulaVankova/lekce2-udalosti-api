@@ -9,3 +9,9 @@ nadpis.classList.remove('zluty'); //odebrala jsem
 //zacílený prvek, pomocí classlistu přidaná další třída
 let ctverecek = document.querySelector('div.zluty');
 ctverecek.classList.add('ctverecek');
+
+let pocitadlo = 0;
+function priNajetiNaCtverec() {
+    console.log('test ' + pocitadlo);
+    pocitadlo++;
+}
