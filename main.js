@@ -28,3 +28,11 @@ function priNajetiNaText() {
 function priOdjetiZTextu() {
     text.classList.add('odstavecNormal');
 }
+
+//EVENTS
+// https://developer.mozilla.org/en-US/docs/Web/API/Event
+
+function stiskKlavesy(udalost) {
+    console.log(udalost);
+}
+
