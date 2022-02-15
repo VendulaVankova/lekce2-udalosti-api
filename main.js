@@ -18,5 +18,13 @@ function priNajetiNaCtverec() {
 
 function zmenStyl() {
     nadpis.classList.toggle('zeleny');  //klikem na nadpis se třída přidá nebo odebere
+}
 
+let text = document.querySelector('p');
+function priNajetiNaText() {
+    text.classList.add('odstavecBold');
+}
+
+function priOdjetiZTextu() {
+    text.classList.add('odstavecNormal');
 }
