@@ -1,3 +1,6 @@
+// Bohužel odevzdávám nedokonalý a nefunkční úkol, obávám se, že pokud bych se dále pokoušela jej zprovoznit, neodevzdala bych jej nikdy. :/ Nepodařilo se mi zprovoznit úkol 1 a 2 a v audiopřehrávači spuštění písně od začátku.
+
+
 // tady je místo pro náš program
 
 console.log('Ahoj, jsem nalinkován.');
@@ -29,6 +32,24 @@ function priOdjetiZTextu() {
     text.classList.add('odstavecNormal');
 }
 
+//V ELIPSE SPÍ LEV - nefunguje :(
+
+//ÚKOL 1
+let cerveneTlacitko = document.getElementById('cerveneTlacitko');
+function redOnClick() {
+    cerveneTlacitko.classList.add('red');
+}
+
+//ÚKOL 2 (???)
+function biggerOnClick() {
+    txt = document.getElementById('vetsiTlacitko');
+    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    txt.style.fontSize = (currentSize + 1) + 'px';
+}
+
+
+
 //EVENTS
 // https://developer.mozilla.org/en-US/docs/Web/API/Event
 
@@ -36,6 +57,7 @@ function stiskKlavesy(udalost) {
     console.log(udalost.key);
 }
 
+//ÚKOL 3
 
 function startAudio() {
     let audioFile = document.getElementById('zvukovaStopa');
@@ -50,6 +72,9 @@ function pauseAudio() {
     console.log('Zastavuji píseň...');
     audioFile.pause();
 }
+
+
+
 
 /* NOT WORKING :/ 
 function muteAudio() {
@@ -71,7 +96,10 @@ function maximumVolume() {
     Object.volume = 1;
 } */
 
-// taken from http://www.java2s.com/ref/javascript/javascript-dom-html-audio-volume-property-set.html
+
+
+
+// taken from http://www.java2s.com/ref/javascript/javascript-dom-html-audio-volume-property-set.html :
 
 let x = document.getElementById("zvukovaStopa");
 
@@ -80,7 +108,7 @@ function getVolume() {
 } 
 
 function muteAudio() { 
-    x.volume = 0.2;
+    x.volume = 0;
   }
 
 function justRightVolume() { 
@@ -90,3 +118,16 @@ function justRightVolume() {
 function maximumVolume() { 
   x.volume = 1.0;
 } 
+
+function startOver() { 
+    audioFile.currentTime = 0;
+    audioFile.play();
+  } 
+
+
+  // nefunguje :( 
+function startOver() { 
+    let audioFile = document.getElementById('zvukovaStopa');
+    audioFile.currentTime = 0;
+    audioFile.play();
+  } 
