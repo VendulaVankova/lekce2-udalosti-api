@@ -9,7 +9,9 @@
 </head>
 <body onkeydown="stiskKlavesy(event)">
 
-	<h1 onclick="zmenStyl()">Změna tříd, události</h1>
+	<!-- LEKCE -->
+
+	<h1 onclick="zmenStyl()">Lekce 2: Změna tříd, události</h1>
 
 	<div onmouseover="priNajetiNaCtverec()" class="ctverecek zluty"></div>
 
@@ -17,28 +19,39 @@
 
 	<img class="obrazek" src="obrazky/kocka.jpg">
 
+	<!-- DOMÁCÍ ÚKOLY -->
+
+	<h2>Lekce 2: Domácí úkoly</h2>
+
 	<button class="tlacitko">Čudlajs</button>
 
 	<button class="tlacitko" onclick="startAudio()">Poslechni si píseň</button>
 
-	<audio id="zvukovaStopa" src="audio/dingdingdang.mp3" preload="auto"></audio>
+	
 
 
 	<div class="audioOvladac">
-		<button class="audioTlacitko" onclick="startAudio()">Přehraj</button>
-		<button class="audioTlacitko" onclick="pauseAudio()">Pauzni</button>
-		<button class="audioTlacitko" onclick="muteAudio()">Ztišit</button>
-		<button class="audioTlacitko" onclick="justRightVolume()">Hlasitost tak akorát</button>
-		<button class="audioTlacitko" onclick="maximumVolume()">Hlasitost na maximum</button>
-		<button class="audioTlacitko" onclick="startOver()">Nastav na začátek</button>
+		<h3>Audio ovladač</h3>
+		<button class="audioTlacitko" onclick="startAudio('#zvukovaStopa')">Přehraj</button>
+		<button class="audioTlacitko" onclick="pauseAudio('#zvukovaStopa')">Pauzni</button>
+		<button class="audioTlacitko" onclick="adjustVolume('#zvukovaStopa', 0)">Ztišit</button>
+		<button class="audioTlacitko" onclick="adjustVolume('#zvukovaStopa', 0.5)">Hlasitost tak akorát</button>
+		<button class="audioTlacitko" onclick="adjustVolume('#zvukovaStopa', 1)">Hlasitost na maximum</button>
+		<button class="audioTlacitko" onclick="startOver('#zvukovaStopa')">Nastav na začátek</button>
+	
+
+		<audio id="zvukovaStopa" src="audio/dingdingdang.mp3" preload="auto"></audio>
+
 	</div>
-
 		
-
 	<div class="lev">
-		<p onmouseover="priNajetiNaText()" onmouseout="priOdjetiZTextu()">V elipse spí lev.</p>
-		<button id="cerveneTlacitko" class="levTlacitko" onclick="redOnClick()">Červený po kliknutí</button>
-		<button id="vetsiTlacitko" class="levTlacitko" onclick="biggerOnClick()">Větší po kliknutí</button>
+		<h3>Změny textového odstavce</h3>
+
+		<p id="lev" style="font-size: 12px;" onmouseover="this.style.fontWeight = 'bold';" onmouseout="this.style.fontWeight = 'normal';">V elipse spí lev.</p>
+
+		<button onclick="redOnClick('lev')">Červený po kliknutí</button>
+		<button onclick="biggerOnClick('#lev', 5)">Větší po kliknutí</button>
+
 	</div>
 
 

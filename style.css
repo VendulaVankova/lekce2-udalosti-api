@@ -30,7 +30,7 @@ h6 {
 	font-family: "Montserrat", serif;
 }
 
-h1 {
+h1, h2 {
 	font-size: 36px;
 }
 
@@ -126,14 +126,6 @@ p {
 	font-size: 16px;
 }
 
-.odstavecBold {
-	font-weight: bold;
-}
-
-.odstavecNormal {
-	font-weight: normal; 
-}
-
 .audioOvladac {
 	margin-top: 50px;
 }
@@ -189,6 +181,8 @@ p {
 }
 
 .red {
-	background-color: #590925;
+	color: #e40a53;
 }
+
+
 
